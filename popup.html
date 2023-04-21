@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'nonce-ABC123' https://cdn.jsdelivr.net/npm/@mediapipe">
+    
+    <title>Document</title>
+    <!-- <script type = "text/javascript" src="mymljs.js"></script> -->
+    <link href="style/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+    <h1 class="heading">Cosign </h1>
+    <h3 class="slogan"><em>Sign Language Translator</em></h3>
+    <form class="user_interactive" id="user_input">
+        
+
+        <label for="checkboxes">Sign Display:</label>
+        
+        <div style="position: relative;">
+            <video id="video" autoplay></video>
+            <canvas class="output_canvas" id="output_canvas" width="1280" height="720" style="position: absolute; left: 0px; top: 0px;"></canvas>
+            <p id='gesture_output' class="output">
+          </div>
+
+          <label>Sign Name:</label><br>
+          <div id="caption"></div>
+
+        <button class="send_request" type="submit">
+            <span class="copy">
+                <svg class="copy_icon" stroke="#007fff" stroke-width="2" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+
+                    <path
+                        d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                        stroke-linecap="round" stroke-linejoin="round" />
+
+                </svg>
+                <p>Copy to subtitle Clipboard</p>
+
+            </span>
+
+            <span class="copied ">
+                <svg class="check_icon" stroke="#007fff" stroke-width="2" viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                </svg>
+                <p>Copied</p>
+            </span>
+        </button>
+    </form>
+    <p>Share your Google Meet tab in order to perform Sign Language Translation</p>
+    <button id="start-capture"> Share Screen </button>
+    <button id="stop-capture"> Stop Sharing </button>
+    <!-- <script defer src="mymljs.js"></script> -->
+    <script defer src="gptcode.js"></script>
+</body>
+
+</html>
